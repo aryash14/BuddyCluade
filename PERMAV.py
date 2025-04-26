@@ -2,6 +2,7 @@ from schema import (
     Activity, 
     ActivitiesResponse, 
     CategoriesResponse, 
+    Category
 )
 
 import json
@@ -14,11 +15,11 @@ def load_permav_data():
         data = json.load(file)
     return data.get('PERMA-V', {})
 
-PERMAV_DATA = load_permav_data()
 
 
 def get_permav_categories_helper() -> CategoriesResponse:
     """Get all PERMA-V categories with descriptions"""
+    PERMAV_DATA = load_permav_data()
     categories = []
     for key, value in PERMAV_DATA.items():
         categories.append(Category(
@@ -31,6 +32,7 @@ def get_permav_categories_helper() -> CategoriesResponse:
 
 def get_vitality_activities_helper() -> ActivitiesResponse:
     """Get activities that promote physical health, energy, and overall wellbeing."""
+    PERMAV_DATA = load_permav_data()
     category_data = PERMAV_DATA.get("V", {})
     activities = []
     for name, details in category_data.get("activities", {}).items():
