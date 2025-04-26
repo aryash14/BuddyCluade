@@ -332,43 +332,37 @@
             "description": "Engaging in planned physical activity that elevates heart rate and builds strength.",
             "benefits": ["Improves mood", "Increases energy", "Enhances physical health"],
             "frequency": "4-5 times weekly",
-            "duration_min": "30-60"
+            "duration_min": "60"
           },
-          "Nutrition Planning": {
+          "Meal preparation": {
             "description": "Mindful planning and preparation of balanced, nutrient-dense meals.",
             "benefits": ["Stabilizes energy", "Supports physical health", "Improves cognitive function"],
             "frequency": "Weekly planning, daily practice",
-            "duration_min": "Meal prep: 1-2 hours weekly"
+            "duration_min": "120"
           },
-          "Sleep Hygiene": {
+          "Daily Sleep Hygiene": {
             "description": "Implementing practices that promote high-quality, restorative sleep.",
             "benefits": ["Improves mood", "Enhances cognitive function", "Supports physical recovery"],
             "frequency": "Daily",
-            "duration_min": "7-9 hours of sleep plus preparation"
+            "duration_min": "480"
           },
-          "Nature Exposure": {
+          "Take a walk": {
             "description": "Spending time outdoors in natural settings to restore attention and reduce stress.",
             "benefits": ["Reduces stress", "Improves mood", "Promotes physical activity"],
             "frequency": "Several times weekly",
-            "duration_min": "20+"
+            "duration_min": "20"
           },
-          "Stress Management": {
-            "description": "Practicing techniques to reduce and cope with stress effectively.",
+          "Mindful walking": {
+            "description": "Practicing techniques to reduce and cope with stress effectively such as by walking mindfully.",
             "benefits": ["Improves resilience", "Protects physical health", "Enhances emotional wellbeing"],
             "frequency": "Daily",
-            "duration_min": "10-20"
+            "duration_min": "20"
           },
-          "Sleep Routine Development": {
-            "description": "Creating healthy pre-sleep routines to improve sleep quality and duration.",
+          "Pre-sleep Hygiene": {
+            "description": "Creating healthy pre-sleep routines to improve sleep quality and duration - turn off devices before bed time.",
             "benefits": ["Improves sleep quality", "Enhances recovery", "Supports mental health"],
             "frequency": "Daily",
-            "duration_min": "30-60 before bed"
-          },
-          "Movement Variety": {
-            "description": "Incorporating various physical activities like exercise, dance, walking, swimming, hiking, or biking throughout the week.",
-            "benefits": ["Reduces stress", "Improves brain function", "Increases energy and happiness"],
-            "frequency": "Daily",
-            "duration_min": "At least 10"
+            "duration_min": "30"
           },
           "Hydration Tracking": {
             "description": "Calculating personal water needs (weight in pounds ÷ 2 = ounces needed) and tracking daily intake.",
@@ -380,7 +374,7 @@
             "description": "Planning and preparing healthy meals together as a family activity.",
             "benefits": ["Teaches nutrition skills", "Creates family bonding", "Improves food relationship"],
             "frequency": "Several times weekly",
-            "duration_min": "30-90"
+            "duration_min": "90"
           }
         }
       }
