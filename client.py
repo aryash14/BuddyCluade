@@ -121,7 +121,7 @@ def get_free_slots(
             free_slots.setdefault(d_str, []).extend(slots)
     return free_slots
 
-def create_calendar_event(
+def create_calendar_event_helper(
     summary: str,
     start_time: Union[str, datetime],
     end_time: Union[str, datetime],
@@ -211,16 +211,10 @@ if __name__ == "__main__":
     print(json.dumps(free_slots, indent=2))
     
     # Example of creating a calendar event
-    event = create_calendar_event(
+    event = create_calendar_event_helper(
         summary="Team Meeting VIP VIP VIP",
         start_time="2025-04-28T10:00:00-07:00",
         end_time="2025-04-28T11:00:00-07:00",
         description="Discuss project roadmap",
-        location="Conference Room A",
-        attendees=[
-            {"email": "colleague1@example.com"},
-            {"email": "colleague2@example.com"}
-        ],
-        recurrence=["RRULE:FREQ=WEEKLY;COUNT=4"]
     )
     print(json.dumps(event, indent=2))

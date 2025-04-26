@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from typing import List, Dict, Optional
+from pydantic import Field
 
 # # Pydantic models
 class Activity(BaseModel):
@@ -40,3 +41,10 @@ class ActivitySearchResponse(BaseModel):
 class ErrorResponse(BaseModel):
     """Error response model"""
     error: str
+
+class CalendarEvent(BaseModel):
+    """Calendar event model"""
+    summary: str = Field(..., description="Summary of the event")
+    start_time: str = Field(..., description="Start time of the event in ISO 8601 format")
+    end_time: str = Field(..., description="End time of the event in ISO 8601 format")
+    description: str = Field(..., description="Description of the event")
