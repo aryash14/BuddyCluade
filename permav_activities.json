@@ -1,0 +1,388 @@
+{
+    "PERMA-V": {
+      "P": {
+        "name": "Positive Emotions",
+        "description": "Activities that generate positive feelings such as joy, gratitude, contentment, hope, and love.",
+        "activities": {
+          "Gratitude Journaling": {
+            "description": "Daily practice of writing down three things you're grateful for to cultivate appreciation and positive emotions.",
+            "benefits": ["Increases happiness", "Reduces depression", "Improves sleep quality"],
+            "frequency": "Daily",
+            "duration_min": "5-10"
+          },
+          "Mindfulness Meditation": {
+            "description": "Focusing attention on the present moment without judgment to enhance awareness of positive experiences.",
+            "benefits": ["Reduces stress", "Enhances emotional regulation", "Increases positive affect"],
+            "frequency": "Daily",
+            "duration_min": "10-20"
+          },
+          "Savoring Experiences": {
+            "description": "Consciously enjoying and extending positive experiences by being fully present and attentive.",
+            "benefits": ["Intensifies positive emotions", "Creates lasting positive memories", "Counters adaptation"],
+            "frequency": "Multiple times daily",
+            "duration_min": "Varies"
+          },
+          "Acts of Kindness": {
+            "description": "Performing deliberate kind acts for others, which creates positive emotions for both giver and receiver.",
+            "benefits": ["Boosts happiness", "Increases sense of meaning", "Strengthens social connections"],
+            "frequency": "2-3 times weekly",
+            "duration_min": "Varies"
+          },
+          "Positive Reframing": {
+            "description": "Consciously shifting perspective to find positive aspects in challenging situations.",
+            "benefits": ["Builds resilience", "Reduces negative rumination", "Promotes optimism"],
+            "frequency": "As needed",
+            "duration_min": "Ongoing practice"
+          },
+          "Prioritize Positivity Daily": {
+            "description": "Actively notice the little things every day. Point them out and share with each other.",
+            "benefits": ["Increases awareness of positive moments", "Creates habit of positivity", "Enhances mood"],
+            "frequency": "Daily",
+            "duration_min": "Throughout the day"
+          },
+          "Gratitude Ping Pong": {
+            "description": "Group activity using a 'talking object' passed around as each person shares something they're grateful for, continuing for 5-7 minutes followed by discussion.",
+            "benefits": ["Creates shared gratitude practice", "Strengthens connections", "Builds positive family culture"],
+            "frequency": "Weekly",
+            "duration_min": "15-20"
+          },
+          "Practice Growth Mindset": {
+            "description": "Changing self-talk from 'I'm not good at…' to 'I'm working on…' or 'I can't do it YET', helping each other rephrase negative statements.",
+            "benefits": ["Builds resilience", "Encourages perseverance", "Reduces fixed mindset limitations"],
+            "frequency": "Daily",
+            "duration_min": "Ongoing practice"
+          },
+          "Savor the Good": {
+            "description": "When something good happens, take 10 seconds to just savor it fully before moving on.",
+            "benefits": ["Extends positive emotions", "Creates mindfulness", "Counters negativity bias"],
+            "frequency": "Multiple times daily",
+            "duration_min": "10 seconds per instance"
+          },
+          "Reframe Negative Thoughts": {
+            "description": "Practice identifying and consciously reframing negative thought patterns into more balanced perspectives.",
+            "benefits": ["Improves emotional regulation", "Reduces anxiety", "Builds cognitive flexibility"],
+            "frequency": "As needed",
+            "duration_min": "Brief moments"
+          },
+          "Daily Journal: 3 Good Things": {
+            "description": "End each day by writing down three good things that happened and reflecting on them.",
+            "benefits": ["Increases positive focus", "Improves sleep", "Creates positive reflection habit"],
+            "frequency": "Daily",
+            "duration_min": "5-10"
+          }
+        }
+      },
+      "E": {
+        "name": "Engagement",
+        "description": "Activities that create a state of flow where one is completely absorbed and focused on what they're doing.",
+        "activities": {
+          "Skill Development": {
+            "description": "Pursuing activities that challenge you at the right level to develop mastery and experience flow.",
+            "benefits": ["Creates flow experiences", "Builds competence", "Increases self-efficacy"],
+            "frequency": "Several times weekly",
+            "duration_min": "30-90"
+          },
+          "Hobby Pursuit": {
+            "description": "Dedicating time to activities you enjoy that require concentration and skill application.",
+            "benefits": ["Reduces stress", "Creates flow states", "Provides satisfaction"],
+            "frequency": "2-3 times weekly",
+            "duration_min": "30+"
+          },
+          "Deep Work Sessions": {
+            "description": "Scheduled periods of distraction-free, focused work on meaningful projects.",
+            "benefits": ["Increases productivity", "Creates flow", "Develops professional skills"],
+            "frequency": "Daily",
+            "duration_min": "60-90"
+          },
+          "Creative Expression": {
+            "description": "Engaging in artistic or creative activities like writing, painting, music, or crafts.",
+            "benefits": ["Stimulates flow", "Provides emotional outlet", "Develops creative thinking"],
+            "frequency": "2-3 times weekly",
+            "duration_min": "30+"
+          },
+          "Mindful Challenge": {
+            "description": "Taking on activities that require full attention and moderate challenge like puzzles, strategy games, or learning new skills.",
+            "benefits": ["Enhances focus", "Creates engagement", "Builds cognitive skills"],
+            "frequency": "Several times weekly",
+            "duration_min": "15-60"
+          },
+          "Family Flow Activities": {
+            "description": "Finding activities that the whole family can be totally engaged in, bringing flow (playing games together, puzzles, sports, making music, etc.).",
+            "benefits": ["Creates shared engagement", "Builds family bonds", "Provides collective joy"],
+            "frequency": "Weekly",
+            "duration_min": "30-120"
+          },
+          "Calming and Focusing Strategies": {
+            "description": "Using mental techniques like counting backwards from 100 by 7 or naming animals alphabetically to center attention.",
+            "benefits": ["Improves focus", "Reduces anxiety", "Creates mental engagement"],
+            "frequency": "As needed",
+            "duration_min": "2-5"
+          },
+          "Sensory Awareness Practice": {
+            "description": "Taking a pause to consciously ask 'what do I hear, see, smell, taste, and feel?' to become fully present.",
+            "benefits": ["Enhances mindfulness", "Creates grounding", "Reduces rumination"],
+            "frequency": "Multiple times daily",
+            "duration_min": "1-2"
+          },
+          "5:5:5 Breathing": {
+            "description": "Breathing exercise: inhale for a count of 5, exhale for a count of 5, repeating 5 times.",
+            "benefits": ["Creates calm focus", "Reduces stress", "Improves oxygen flow"],
+            "frequency": "As needed",
+            "duration_min": "1-2"
+          },
+          "Square Breathing": {
+            "description": "Breathing technique: inhale for 4, hold for 4, exhale for 4, and hold for 4 counts.",
+            "benefits": ["Regulates nervous system", "Improves focus", "Creates rhythm"],
+            "frequency": "As needed",
+            "duration_min": "2-5"
+          },
+          "Vacuum Breathing": {
+            "description": "Imagining that the inhale pulls in negative thoughts or tension, and the exhale releases them to evaporate.",
+            "benefits": ["Creates mental imagery", "Provides stress relief", "Improves mindfulness"],
+            "frequency": "As needed",
+            "duration_min": "2-5"
+          }
+        }
+      },
+      "R": {
+        "name": "Relationships",
+        "description": "Activities that build and strengthen positive connections with others.",
+        "activities": {
+          "Quality Time with Loved Ones": {
+            "description": "Spending undistracted, present-focused time with family and close friends.",
+            "benefits": ["Strengthens bonds", "Creates shared memories", "Provides emotional support"],
+            "frequency": "Multiple times weekly",
+            "duration_min": "Varies"
+          },
+          "Active Listening Practice": {
+            "description": "Consciously practicing attentive, empathetic listening during conversations.",
+            "benefits": ["Deepens understanding", "Shows respect and care", "Improves relationship quality"],
+            "frequency": "Daily",
+            "duration_min": "During conversations"
+          },
+          "Community Involvement": {
+            "description": "Participating in group activities, clubs, or organizations aligned with your interests.",
+            "benefits": ["Expands social network", "Creates sense of belonging", "Provides shared purpose"],
+            "frequency": "Weekly or biweekly",
+            "duration_min": "1-3 hours"
+          },
+          "Relationship Check-ins": {
+            "description": "Regular conversations with important people in your life to maintain connection.",
+            "benefits": ["Prevents drift in relationships", "Resolves issues early", "Deepens connection"],
+            "frequency": "Weekly to monthly",
+            "duration_min": "15-60"
+          },
+          "Expressing Appreciation": {
+            "description": "Regularly communicating gratitude and appreciation to people in your life.",
+            "benefits": ["Strengthens positive feelings", "Builds relationship security", "Creates reciprocity"],
+            "frequency": "Multiple times weekly",
+            "duration_min": "Brief moments"
+          },
+          "Affirmations Practice": {
+            "description": "Using positive, present tense, specific, and personal affirmations to replace negative self-talk. Place where visible daily and support each other with affirmations.",
+            "benefits": ["Improves self-image", "Creates positive mindset", "Builds supportive environment"],
+            "frequency": "Daily",
+            "duration_min": "5-10"
+          },
+          "Love Languages Exploration": {
+            "description": "Learning about the 5 Love Languages and understanding each family member's love language to better express love in meaningful ways.",
+            "benefits": ["Improves relationship satisfaction", "Reduces misunderstandings", "Creates personalized connection"],
+            "frequency": "Initial learning, then ongoing application",
+            "duration_min": "Varies"
+          },
+          "Family Tech Unplug": {
+            "description": "Putting all tech devices away and purposefully engaging as a family through meaningful conversations or playing games together.",
+            "benefits": ["Reduces distractions", "Deepens connections", "Creates quality time"],
+            "frequency": "Daily or several times weekly",
+            "duration_min": "30-120"
+          },
+          "Regular Hugging Practice": {
+            "description": "Making hugging a regular practice to create greater trust, empathy, and overall well-being.",
+            "benefits": ["Releases oxytocin", "Reduces stress", "Creates physical connection"],
+            "frequency": "Multiple times daily",
+            "duration_min": "Brief moments"
+          }
+        }
+      },
+      "M": {
+        "name": "Meaning",
+        "description": "Activities that provide a sense of purpose and connection to something larger than oneself.",
+        "activities": {
+          "Values Clarification": {
+            "description": "Identifying and reflecting on personal values and how they guide your choices.",
+            "benefits": ["Increases sense of purpose", "Guides decision-making", "Aligns actions with values"],
+            "frequency": "Monthly reflection",
+            "duration_min": "30-60"
+          },
+          "Volunteering": {
+            "description": "Contributing time and skills to causes or organizations you believe in.",
+            "benefits": ["Creates sense of contribution", "Connects to larger purpose", "Provides perspective"],
+            "frequency": "Weekly to monthly",
+            "duration_min": "2-4 hours"
+          },
+          "Legacy Project": {
+            "description": "Working on something meaningful that will outlast you or benefit future generations.",
+            "benefits": ["Creates transcendent purpose", "Provides daily meaning", "Connects past to future"],
+            "frequency": "Regular ongoing work",
+            "duration_min": "Varies"
+          },
+          "Spiritual Practice": {
+            "description": "Engaging in practices that connect you to something larger than yourself.",
+            "benefits": ["Provides framework for meaning", "Creates community", "Answers existential questions"],
+            "frequency": "Daily to weekly",
+            "duration_min": "15-60"
+          },
+          "Purpose Reflection": {
+            "description": "Regular journaling or contemplation about your life's purpose and contribution.",
+            "benefits": ["Clarifies direction", "Integrates experiences", "Reminds of meaning"],
+            "frequency": "Weekly",
+            "duration_min": "15-30"
+          },
+          "Big P and Little p Purpose": {
+            "description": "Identifying what you're doing to find purpose outside yourself that impacts the world (big P) while putting your strengths/skills into practice (little p), exploring how to do this as a family.",
+            "benefits": ["Creates dual purpose alignment", "Connects individual to community", "Builds shared family purpose"],
+            "frequency": "Monthly reflection",
+            "duration_min": "30-60"
+          },
+          "Sameness to Awe": {
+            "description": "Breaking out of routines by doing something different - taking a scenic path home, watching sunsets/sunrises, cloud watching, etc. to experience awe.",
+            "benefits": ["Creates perspective shift", "Triggers sense of wonder", "Connects to larger world"],
+            "frequency": "Weekly",
+            "duration_min": "Varies"
+          }
+        }
+      },
+      "A": {
+        "name": "Accomplishment",
+        "description": "Activities that provide a sense of achievement, progress, and mastery.",
+        "activities": {
+          "Goal Setting": {
+            "description": "Setting and tracking meaningful short and long-term goals across life domains.",
+            "benefits": ["Provides direction", "Creates motivation", "Measures progress"],
+            "frequency": "Weekly review",
+            "duration_min": "15-30"
+          },
+          "Skill Mastery": {
+            "description": "Dedicated practice to develop expertise in an area of interest or value.",
+            "benefits": ["Builds competence", "Creates pride", "Develops identity"],
+            "frequency": "Several times weekly",
+            "duration_min": "30-60"
+          },
+          "Progress Tracking": {
+            "description": "Systematically recording and reviewing progress toward important goals.",
+            "benefits": ["Provides motivation", "Celebrates small wins", "Creates accountability"],
+            "frequency": "Daily or weekly",
+            "duration_min": "5-15"
+          },
+          "Challenging Projects": {
+            "description": "Taking on tasks that stretch your abilities and provide satisfaction when completed.",
+            "benefits": ["Creates growth", "Builds confidence", "Provides fulfillment"],
+            "frequency": "Ongoing",
+            "duration_min": "Project-dependent"
+          },
+          "Celebration Ritual": {
+            "description": "Consciously acknowledging and celebrating accomplishments, large and small.",
+            "benefits": ["Reinforces achievement", "Creates positive emotions", "Motivates future effort"],
+            "frequency": "After achievements",
+            "duration_min": "Varies"
+          },
+          "Personal Wants List": {
+            "description": "Creating a list of things you want for yourself right now, both material and experiential.",
+            "benefits": ["Clarifies desires", "Creates motivation", "Provides direction"],
+            "frequency": "Quarterly update",
+            "duration_min": "20-30"
+          },
+          "Bucket List Creation": {
+            "description": "Documenting experiences you want to have before you 'kick the bucket' to guide life priorities.",
+            "benefits": ["Creates lifetime vision", "Inspires action", "Prioritizes experiences"],
+            "frequency": "Annual update",
+            "duration_min": "30-60"
+          },
+          "Vision for Life Areas": {
+            "description": "Creating a vision for your life across domains for 1, 5, and 10 years into the future.",
+            "benefits": ["Develops long-term perspective", "Aligns daily actions with vision", "Creates meaning"],
+            "frequency": "Semi-annual review",
+            "duration_min": "60-90"
+          },
+          "Wheel of Life Assessment": {
+            "description": "Completing a Wheel of Life assessment to evaluate satisfaction across life domains and identify areas for improvement.",
+            "benefits": ["Creates life balance awareness", "Identifies growth areas", "Measures progress over time"],
+            "frequency": "Quarterly",
+            "duration_min": "20-30"
+          },
+          "SMART Goal Setting": {
+            "description": "Creating goals that are Specific, Measurable, Attainable, Realistic, and Time-bound.",
+            "benefits": ["Increases goal success rate", "Creates clarity", "Enables tracking"],
+            "frequency": "Monthly",
+            "duration_min": "30-45"
+          },
+          "Family Goal Setting": {
+            "description": "Working together as a family to create common goals that everyone contributes to achieving.",
+            "benefits": ["Creates shared purpose", "Builds teamwork", "Strengthens family identity"],
+            "frequency": "Monthly or quarterly",
+            "duration_min": "45-60"
+          }
+        }
+      },
+      "V": {
+        "name": "Vitality",
+        "description": "Activities that promote physical health, energy, and overall wellbeing.",
+        "activities": {
+          "Regular Exercise": {
+            "description": "Engaging in planned physical activity that elevates heart rate and builds strength.",
+            "benefits": ["Improves mood", "Increases energy", "Enhances physical health"],
+            "frequency": "4-5 times weekly",
+            "duration_min": "30-60"
+          },
+          "Nutrition Planning": {
+            "description": "Mindful planning and preparation of balanced, nutrient-dense meals.",
+            "benefits": ["Stabilizes energy", "Supports physical health", "Improves cognitive function"],
+            "frequency": "Weekly planning, daily practice",
+            "duration_min": "Meal prep: 1-2 hours weekly"
+          },
+          "Sleep Hygiene": {
+            "description": "Implementing practices that promote high-quality, restorative sleep.",
+            "benefits": ["Improves mood", "Enhances cognitive function", "Supports physical recovery"],
+            "frequency": "Daily",
+            "duration_min": "7-9 hours of sleep plus preparation"
+          },
+          "Nature Exposure": {
+            "description": "Spending time outdoors in natural settings to restore attention and reduce stress.",
+            "benefits": ["Reduces stress", "Improves mood", "Promotes physical activity"],
+            "frequency": "Several times weekly",
+            "duration_min": "20+"
+          },
+          "Stress Management": {
+            "description": "Practicing techniques to reduce and cope with stress effectively.",
+            "benefits": ["Improves resilience", "Protects physical health", "Enhances emotional wellbeing"],
+            "frequency": "Daily",
+            "duration_min": "10-20"
+          },
+          "Sleep Routine Development": {
+            "description": "Creating healthy pre-sleep routines to improve sleep quality and duration.",
+            "benefits": ["Improves sleep quality", "Enhances recovery", "Supports mental health"],
+            "frequency": "Daily",
+            "duration_min": "30-60 before bed"
+          },
+          "Movement Variety": {
+            "description": "Incorporating various physical activities like exercise, dance, walking, swimming, hiking, or biking throughout the week.",
+            "benefits": ["Reduces stress", "Improves brain function", "Increases energy and happiness"],
+            "frequency": "Daily",
+            "duration_min": "At least 10"
+          },
+          "Hydration Tracking": {
+            "description": "Calculating personal water needs (weight in pounds ÷ 2 = ounces needed) and tracking daily intake.",
+            "benefits": ["Improves cognitive function", "Supports energy levels", "Enhances physical performance"],
+            "frequency": "Daily",
+            "duration_min": "Throughout the day"
+          },
+          "Family Cooking": {
+            "description": "Planning and preparing healthy meals together as a family activity.",
+            "benefits": ["Teaches nutrition skills", "Creates family bonding", "Improves food relationship"],
+            "frequency": "Several times weekly",
+            "duration_min": "30-90"
+          }
+        }
+      }
+    }
+  }
