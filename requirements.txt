@@ -1,3 +1,6 @@
+# PERMA-V Wellbeing Project Requirements
+# Note: This file replaces both requirements.txt and requirement.txt
+
 # Core dependencies
 fastapi>=0.110.0
 pydantic==2.11.3
@@ -20,6 +23,9 @@ typer==0.15.2
 rich==14.0.0
 click==8.1.8
 shellingham==1.5.4
+Pygments==2.19.1
+markdown-it-py==3.0.0
+mdurl==0.1.2
 
 # Utilities and support packages
 python-dotenv==1.1.0
@@ -31,4 +37,5 @@ idna==3.10
 exceptiongroup==1.2.2
 certifi==2023.11.17
 charset-normalizer==3.3.2
-urllib3==2.0.7 
+urllib3==2.0.7
+typing-inspection==0.4.0 
