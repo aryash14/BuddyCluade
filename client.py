@@ -3,7 +3,7 @@ import os
 import json
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo 
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional, Union
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -124,6 +124,86 @@ def get_free_slots(
     
     return free_slots
 
+def create_calendar_event(
+    summary: str,
+    start_time: Union[str, datetime],
+    end_time: Union[str, datetime],
+    description: Optional[str] = None,
+    location: Optional[str] = None,
+    attendees: Optional[List[Dict[str, str]]] = None,
+    recurrence: Optional[List[str]] = None,
+    calendar_id: str = "primary",
+    timezone: str = "America/Los_Angeles",
+    send_notifications: bool = True
+) -> Dict:
+    """
+    Create a calendar event using the Google Calendar API.
+    
+    Args:
+        summary: Title of the event
+        start_time: Start time (ISO datetime string or datetime object)
+        end_time: End time (ISO datetime string or datetime object)
+        description: Event description
+        location: Physical location of the event
+        attendees: List of dictionaries with attendee emails, e.g. [{"email": "person@example.com"}]
+        recurrence: List of RRULE strings for recurring events
+        calendar_id: Calendar identifier (default: "primary")
+        timezone: Timezone for the event
+        send_notifications: Whether to send notifications to attendees
+        
+    Returns:
+        Dict with the created event details
+    """
+    access_token = os.environ.get("ACCESS_TOKEN")
+    if not access_token:
+        raise RuntimeError("GOOGLE_CALENDAR_TOKEN environment variable not set.")
+    
+    # Convert datetime objects to ISO format strings if needed
+    if isinstance(start_time, datetime):
+        start_time = start_time.isoformat()
+    if isinstance(end_time, datetime):
+        end_time = end_time.isoformat()
+    
+    # Construct the event
+    event = {
+        "summary": summary,
+        "start": {
+            "dateTime": start_time,
+            "timeZone": timezone,
+        },
+        "end": {
+            "dateTime": end_time,
+            "timeZone": timezone,
+        }
+    }
+    
+    # Add optional fields if provided
+    if description:
+        event["description"] = description
+    if location:
+        event["location"] = location
+    if attendees:
+        event["attendees"] = attendees
+    if recurrence:
+        event["recurrence"] = recurrence
+    
+    # Make the API request
+    url = f"https://www.googleapis.com/calendar/v3/calendars/{calendar_id}/events"
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Content-Type": "application/json"
+    }
+    
+    params = {
+        "sendNotifications": "true" if send_notifications else "false"
+    }
+    
+    response = requests.post(url, headers=headers, json=event, params=params)
+    response.raise_for_status()
+    
+    print(f"Event created: {response.json().get('htmlLink')}")
+    return response.json()
+
 
 # Example usage:
 if __name__ == "__main__":
@@ -132,3 +212,20 @@ if __name__ == "__main__":
     
     # Print the results
     print(json.dumps(free_slots, indent=2))
+    
+    """
+    # Example of creating a calendar event
+    event = create_calendar_event(
+        summary="Team Meeting VIP VIP VIP",
+        start_time="2025-04-28T10:00:00-07:00",
+        end_time="2025-04-28T11:00:00-07:00",
+        description="Discuss project roadmap",
+        location="Conference Room A",
+        attendees=[
+            {"email": "colleague1@example.com"},
+            {"email": "colleague2@example.com"}
+        ],
+        recurrence=["RRULE:FREQ=WEEKLY;COUNT=4"]
+    )
+    print(json.dumps(event, indent=2))
+    """
