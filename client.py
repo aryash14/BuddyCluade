@@ -4,6 +4,7 @@ import json
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo 
 from typing import List, Dict, Tuple, Optional, Union
+import pytz
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -14,25 +15,24 @@ def parse_datetime(dt_str: str) -> datetime:
     return datetime.fromisoformat(dt_str)
 
 def load_calendar_data(
-    time_min=None,
-    time_max=None
+    date: str
 ) -> Dict:
     """
     Query Google Calendar FreeBusy API and return busy time data.
     Args:
-        calendar_ids: List of calendar IDs to query.
-        time_min: ISO8601 string for the start time.
-        time_max: ISO8601 string for the end time.
+        date: Date string in "YYYY-MM-DD" format.   
     Returns:
         Dict response from the FreeBusy API.
     """
     # Set default time_min and time_max if not provided
-    now = datetime.now(ZoneInfo('America/Los_Angeles'))
-    if time_min is None:
-        time_min = now.isoformat()
-    if time_max is None:
-        time_max = (now + timedelta(days=7)).isoformat()
-
+    date_obj = datetime.strptime(date, "%Y-%m-%d")
+    pacific = pytz.timezone('America/Los_Angeles')
+    target_date = pacific.localize(date_obj)
+    # Convert to UTC and get the start of the day
+    time_min = target_date.astimezone(pytz.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    # Get the end of the day in UTC (start of the next day - 1 second)
+    time_max = (target_date + timedelta(days=1, seconds=-1)).astimezone(pytz.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+ 
     access_token = os.environ.get("ACCESS_TOKEN")
     if not access_token:
         raise RuntimeError("GOOGLE_CALENDAR_TOKEN environment variable not set.")
@@ -45,7 +45,7 @@ def load_calendar_data(
     body = {
         "timeMin": time_min,
         "timeMax": time_max,
-        "timezone": "PST",
+        "timeZone": "America/Los_Angeles",
         "items": [{"id": "primary"}]
     }
     response = requests.post(url, headers=headers, json=body)
@@ -55,19 +55,19 @@ def load_calendar_data(
     return response.json()
 
 def get_free_slots(
-    time_min=None,
-    time_max=None
+    date: str = None
 ) -> Dict:
     """
     Given Google Calendar free/busy data, find available time slots.
     
     Args:
-        calendar_id: Google Calendar ID        
+        date: Date string in "YYYY-MM-DD" format.   
     Returns:
         Dictionary with dates as keys and lists of free time slots as values
     """
-
-    calendar_data = load_calendar_data(time_min, time_max)["calendars"]["primary"]
+    if date is None:
+        date = now.strftime("%Y-%m-%d")
+    calendar_data = load_calendar_data(date)["calendars"]["primary"]
     if not calendar_data or "busy" not in calendar_data:
         return {}
 
@@ -208,12 +208,11 @@ def create_calendar_event(
 # Example usage:
 if __name__ == "__main__":
     # Get free slots
-    free_slots = get_free_slots(time_min="2025-04-28T00:00:00.000+00:00", time_max="2025-04-28T23:59:00.000+00:00")
+    free_slots = get_free_slots("2025-04-28")
     
     # Print the results
     print(json.dumps(free_slots, indent=2))
     
-    """
     # Example of creating a calendar event
     event = create_calendar_event(
         summary="Team Meeting VIP VIP VIP",
@@ -228,4 +227,3 @@ if __name__ == "__main__":
         recurrence=["RRULE:FREQ=WEEKLY;COUNT=4"]
     )
     print(json.dumps(event, indent=2))
-    """
