@@ -11,7 +11,7 @@ import json
 
 # Load PERMA-V activities data
 def load_permav_data():
-    with open('permav_activities.json', 'r') as file:
+    with open('/Users/aryash/BuddyClaude/permav_activities.json', 'r') as file:
         data = json.load(file)
     return data.get('PERMA-V', {})
 

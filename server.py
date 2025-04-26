@@ -16,7 +16,6 @@ def get_permav_categories() -> CategoriesResponse:
     """Get all PERMA-V categories with descriptions"""
     return get_permav_categories_helper()
 
-
 @mcp.tool()
 def get_vitality_activities() -> ActivitiesResponse:
     """Get activities that promote physical health, energy, and overall wellbeing."""
