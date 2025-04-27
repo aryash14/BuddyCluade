@@ -9,6 +9,7 @@ uvicorn==0.34.0
 mcp==1.6.0
 typing_extensions==4.13.2
 pytz
+flask
 # HTTP and API dependencies
 requests==2.32.3
 httpx==0.28.1

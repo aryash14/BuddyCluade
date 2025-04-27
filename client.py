@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo
 from typing import List, Dict, Tuple, Optional, Union
 import pytz
 from dotenv import load_dotenv
+from auth import main
 
 load_dotenv()
 
@@ -34,10 +35,13 @@ def load_calendar_data(
     # Get the end of the day in UTC (start of the next day - 1 second)
     time_max = (target_date + timedelta(days=1, seconds=-1)).astimezone(pytz.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
  
-    access_token = os.environ.get("ACCESS_TOKEN")
-    if not access_token:
-        raise RuntimeError("GOOGLE_CALENDAR_TOKEN environment variable not set.")
+    with open("/Users/aryash/BuddyClaude/google_tokens1.json", "r") as f:
+        tokens = json.load(f)
 
+    access_token = tokens.get("access_token")
+    # if not access_token:
+    #     main()
+        
     url = "https://www.googleapis.com/calendar/v3/freeBusy"
     headers = {
         "Authorization": f"Bearer {access_token}",
@@ -202,19 +206,29 @@ def create_calendar_event_helper(
     return response.json()
 
 
+# def get_access_token():
+#     with open("google_tokens.json", "r") as f:
+#         tokens = json.load(f)
+#     with open(".env", "w") as f:
+#         f.write(f"ACCESS_TOKEN=\"{tokens['access_token']}\"\n")
+#     return
+
+
+
 # Example usage:
 if __name__ == "__main__":
+    # get_access_token()
     # Get free slots
     free_slots = get_free_slots("2025-04-28")
     
-    # Print the results
-    print(json.dumps(free_slots, indent=2))
+    # # Print the results
+    # print(json.dumps(free_slots, indent=2))
     
-    # Example of creating a calendar event
-    event = create_calendar_event_helper(
-        summary="Team Meeting VIP VIP VIP",
-        start_time="2025-04-28T10:00:00-07:00",
-        end_time="2025-04-28T11:00:00-07:00",
-        description="Discuss project roadmap",
-    )
-    print(json.dumps(event, indent=2))
+    # # Example of creating a calendar event
+    # event = create_calendar_event_helper(
+    #     summary="Team Meeting VIP VIP VIP",
+    #     start_time="2025-04-28T10:00:00-07:00",
+    #     end_time="2025-04-28T11:00:00-07:00",
+    #     description="Discuss project roadmap",
+    # )
+    # print(json.dumps(event, indent=2))
