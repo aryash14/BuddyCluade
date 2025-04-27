@@ -2,7 +2,7 @@
 .env
 .env.*
 *.env
-google_tokens1.json
+google_tokens_1.json
 
 # Python
 __pycache__/
